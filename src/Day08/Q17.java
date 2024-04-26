@@ -9,7 +9,7 @@ class Q17 {
             System.out.println(a);
         }
 
-        //System.out.println(a);  ---> Illegal, can't access outside of the block
+        //System.out.println(a);  ---> Illegal, can't access outside the block
     }
 }
 

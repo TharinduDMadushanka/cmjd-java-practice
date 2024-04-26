@@ -1,10 +1,11 @@
 package Day08;
 
+//case 03
 class Q18 {
     public static void main(String[] args) {
         int[] ar = {1,2,4,6,8,3,6,4,5,6,7,2,1} ;
 
-        for(long a : ar){ // Legal
+        for(long a : ar){ // Legal --> wider casting ok
             System.out.print(a + " ");
         }
 
