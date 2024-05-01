@@ -8,10 +8,10 @@ import java.util.Arrays;
 class Q3 {
 
     public static void main(String[] args) {
-        int ar[] = {100, 200, 300, 400, 500, 600};
-        int br[] = {10, 20, 30, 40, 50, 60};
+        int[] ar = {100, 200, 300, 400, 500, 600};
+        int[] br = {10, 20, 30, 40, 50, 60};
 
-        int cr[];
+        int[] cr;
         cr = mergeTwoArrays(ar, br);
 
         System.out.println(Arrays.toString(ar)); // [100, 200, 300, 400, 500, 600]
@@ -26,7 +26,7 @@ class Q3 {
         }
 
         for (int i=0;i<br.length;i++){
-            temp[i+ ar.length]=br[i];
+            temp[i+ ar.length]=br[i]; // before index of ar.length
         }
         return temp;
     }
