@@ -24,7 +24,7 @@ class Q1 {
 
     public static void copyValueFromTo(int[] from, int[] to){
 
-
+        int minLength = from.length > to.length ? to.length : from.length; //find min length for iterate
         for (int i=0;i<from.length;i++){ // copying values
             to[i]=from[i];
         }

@@ -1,9 +1,15 @@
 package Day09;
 
+// Q419 Exercise 6
+
 import java.util.Arrays;
 
-class Q3 {
-
+class Q2 {
+    public static void copyValueFromTo(int[] from, int[] to){
+        for(int i = 0; i < from.length; i++){
+            to[i] = from[i];
+        }
+    }
     public static void main(String[] args) {
         int ar[] = {100, 200, 300, 400, 500, 600};
         int br[] = new int[ar.length];
@@ -20,14 +26,7 @@ class Q3 {
         System.out.println(Arrays.toString(dr)); // [100, 200, 300, 400, 500, 600, 0, 0, 0]
 
     }
-    public static void copyValueFromTo(int[] from, int[] to){
-        for(int i = 0; i < from.length; i++){
-            to[i] = from[i];
-        }
-    }
-
-    public static void copyValueFromTo(int[] ar,int[] cr){
-        
-    }
 }
+
+
 
