@@ -1,7 +1,7 @@
 package Day09;
 
 //Q437 Exercise 14
-//// add user input details to an array & check that input is duplicate or not
+// add user input details to an array & check that input is duplicate or not
 
 import java.util.Arrays;
 import java.util.Scanner;
