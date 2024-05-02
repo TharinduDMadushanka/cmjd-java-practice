@@ -4,7 +4,7 @@ package Day09_Multidimensional_Arrays;
  * Object Arrays
  */
 
-class Example {
+class Q1 {
 
     public static void main(String[] args) {
         int [] ar = new int[5];
