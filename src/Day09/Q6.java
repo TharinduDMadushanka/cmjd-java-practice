@@ -3,7 +3,7 @@ package Day09;
 // Q427 Exercise 9
 // check arrays are equal or not
 
-class Example {
+class Q6 {
 
     public static void main(String[] args) {
         int ar[] = {10,20,30,40,50};
