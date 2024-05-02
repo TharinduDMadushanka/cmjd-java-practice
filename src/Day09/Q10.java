@@ -6,7 +6,7 @@ import java.util.Scanner;
 // Q435 Exercise 13
 // add user input details to an array
 
-class Example {
+class Q10 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
