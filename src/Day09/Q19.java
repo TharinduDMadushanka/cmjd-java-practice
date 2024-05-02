@@ -12,7 +12,7 @@ class Q19 {
     }
 
     public static void increment() {
-        for (int i = 0; i < ar.length; i++) { // dont need any return because ar is a static
+        for (int i = 0; i < ar.length; i++) { // don't need any return because ar is a static
             ar[i]++;
         }
     }
