@@ -1,7 +1,7 @@
 package Day09;
 
 // Q433 Exercise 12
-// check 2 arrays are duplicate
+// check an array has duplicate values
 
 import java.util.Arrays;
 
@@ -19,9 +19,8 @@ class Q9 {
 
     public static boolean isDuplicate(int[] ar) {
 
-
-        for (int i = 0; i < ar.length; i++) {
-            for (int j = 0; j < ar.length; j++) {
+        for (int i = 0; i < ar.length-1; i++) { // check ar[0]==ar[1],ar[1]==ar[2],....,ar[9]==ar[10]
+            for (int j = i+1; j < ar.length; j++) {
                 if (ar[i] == ar[j]) {
                     return true;
                 }

@@ -15,6 +15,13 @@ class Example {
         int[] marksArr = new int[0];
         while (marks != -1) {
             // add to array
+            int[] temp = new int[marksArr.length + 1];
+            for (int i = 0; i < marksArr.length; i++) {
+                temp[i] = marksArr[i];
+            }
+
+            temp[temp.length - 1] = marks;
+            marksArr = temp;
             System.out.println("Input marks (Press -1 to terminate the program) : ");
             marks = input.nextInt();
         }
