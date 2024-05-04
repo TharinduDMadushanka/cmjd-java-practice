@@ -1,7 +1,7 @@
 package Day10_Swing;
 
 /**
- * Grid Layout
+ * Create calculator buttons
  */
 
 import javax.swing.*;
