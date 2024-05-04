@@ -1,7 +1,7 @@
 package Day10_Swing;
 
 /**
- * create label and buttons in south and north
+ * exercise use 2 layouts
  */
 
 import javax.swing.*;
