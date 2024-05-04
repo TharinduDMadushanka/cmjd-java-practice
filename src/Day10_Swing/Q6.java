@@ -1,5 +1,9 @@
 package Day10_Swing;
 
+/**
+ * create 5 buttons for south,west,north,center and east
+ */
+
 import javax.swing.*;
 import java.awt.*;
 

@@ -1,5 +1,9 @@
 package Day10_Swing;
 
+/**
+ * create label and buttons in south and north
+ */
+
 import javax.swing.*;
 import java.awt.*;
 
