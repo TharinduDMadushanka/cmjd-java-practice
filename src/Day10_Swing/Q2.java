@@ -1,7 +1,7 @@
 package Day10_Swing;
 
 /**
- * if Close values are equal in both tabs they cloe together
+ * if Close values are equal in both tabs they close together
  */
 
 import javax.swing.*;
