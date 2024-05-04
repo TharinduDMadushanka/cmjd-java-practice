@@ -16,4 +16,8 @@ public class Q4 {
 
 class Calculator extends JFrame{ // inherit JFrame class
 
+    // Now this Calculator class is a JFrame
+    //Super class --> JFrame
+    //Sub Class --> Calculator
+
 }
