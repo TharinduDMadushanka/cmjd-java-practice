@@ -44,29 +44,42 @@ class AddCustomerForm extends JFrame {
         JPanel centerPanel=new JPanel(new GridLayout(4,2));
         Font font=new Font("",1,15);
 
-        idLabel=new JLabel("Id:");
+        idLabel = new JLabel("Id");
         idLabel.setFont(font);
-        centerPanel.add(idLabel);
+        JPanel idLabelPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        idLabelPanel.add(idLabel);
+        centerPanel.add(idLabelPanel);
 
-        idTextField=new JTextField(5);
+        idTextField = new JTextField(5);
         idTextField.setFont(font);
-        centerPanel.add(idTextField);
+        JPanel idTextFieldPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        idTextFieldPanel.add(idTextField);
+        centerPanel.add(idTextFieldPanel);
+
 
         nameLabel = new JLabel("Name");
         nameLabel.setFont(font);
-        centerPanel.add(nameLabel);
+        JPanel nameLabelPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        nameLabelPanel.add(nameLabel);
+        centerPanel.add(nameLabelPanel);
 
         nameTextField = new JTextField(15);
         nameTextField.setFont(font);
-        centerPanel.add(nameTextField);
+        JPanel nameTextFieldPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        nameTextFieldPanel.add(nameTextField);
+        centerPanel.add(nameTextFieldPanel);
 
         addressLabel = new JLabel("Address");
         addressLabel.setFont(font);
-        centerPanel.add(addressLabel);
+        JPanel adLabelPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        adLabelPanel.add(addressLabel);
+        centerPanel.add(adLabelPanel);
 
         addressTextField = new JTextField(20);
         addressTextField.setFont(font);
-        centerPanel.add(addressTextField);
+        JPanel addressTextFieldPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        addressTextFieldPanel .add(addressTextField);
+        centerPanel.add(addressTextFieldPanel );
 
         nicLabel = new JLabel("NIC");
         nicLabel.setFont(font);
