@@ -28,6 +28,7 @@ class Notepad extends JFrame{
 
         mainMenu = new JMenuBar();
 
+        // file
         fileMenu = new JMenu("File");
         item1 = new JMenuItem("Item 1");
         fileMenu.add(item1);
@@ -37,6 +38,7 @@ class Notepad extends JFrame{
 
         mainMenu.add(fileMenu);
 
+        //edit
         editMenu = new JMenu("Edit");
         item3 = new JMenuItem("Item 3");
         editMenu.add(item3);
@@ -45,6 +47,17 @@ class Notepad extends JFrame{
         editMenu.add(item4);
 
         mainMenu.add(editMenu);
+
+        //view
+
+        viewMenu =new JMenu("View");
+        item5=new JMenuItem("Item 5");
+        viewMenu.add(item5);
+
+        item6=new JMenuItem("Item 6");
+        viewMenu.add(item6);
+
+        mainMenu.add(viewMenu);
 
         setJMenuBar(mainMenu);
 
