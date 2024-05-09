@@ -1,5 +1,7 @@
 package Day10_Swing;
 
+// Calculator with text field
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -24,7 +26,7 @@ class Calculator8 extends JFrame { // inherit JFrame class
 
         setLayout(new BorderLayout());
 
-        textField = new JTextField();
+        textField = new JTextField(); //J text field object
         textField.setFont(new Font("", 1, 25));
         add("North", textField);
 
