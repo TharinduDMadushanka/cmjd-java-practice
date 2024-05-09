@@ -83,11 +83,15 @@ class AddCustomerForm extends JFrame {
 
         nicLabel = new JLabel("NIC");
         nicLabel.setFont(font);
-        centerPanel.add(nicLabel);
+        JPanel nicLabelPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        nicLabelPanel.add(nicLabel);
+        centerPanel.add(nicLabelPanel);
 
         nicTextField = new JTextField(10);
         nicTextField.setFont(font);
-        centerPanel.add(nicTextField);
+        JPanel nicTextFieldPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        nicTextFieldPanel.add(nicTextField);
+        centerPanel.add(nicTextFieldPanel);
 
         add("Center", centerPanel);
 
