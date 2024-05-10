@@ -1,4 +1,4 @@
-/**
+package Assingment_04; /**
  * Input two numbers and check whether the first number is greater than the second number. If so add the two numbers otherwise display the two numbers.
  */
 

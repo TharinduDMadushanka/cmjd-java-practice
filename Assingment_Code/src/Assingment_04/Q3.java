@@ -1,4 +1,4 @@
-/**
+package Assingment_04; /**
  * Enter marks Obtained by a student for Chemistry, Physics and Combined math. Calculate the total and average.
  * If the average is greater than 75 then display “Pass” otherwise “Fail”. Write a java program to perform the above task.
  */

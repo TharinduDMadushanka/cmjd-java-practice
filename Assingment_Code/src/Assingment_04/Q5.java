@@ -1,4 +1,4 @@
-/**
+package Assingment_04; /**
  * Enter the unit price and amount bought from a product. Calculate the total.
  * If the total is greater than Rs.1500/- display “You are entitled to the super draw. Otherwise display “try again”.
  */

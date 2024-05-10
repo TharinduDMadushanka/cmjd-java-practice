@@ -1,3 +1,5 @@
+package Assingment_04;
+
 import java.util.Scanner;
 
 public class Q4 {
