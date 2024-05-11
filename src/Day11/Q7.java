@@ -1,7 +1,7 @@
 package Day11;
 
 /**
- * Option 3
+ * Option 3 -->setter method
  */
 
 public class Q7 {

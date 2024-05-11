@@ -1,7 +1,7 @@
 package Day11;
 
 /**
- * Option 1
+ * Option 1 --> create object from A1 class
  */
 public class Q5 {
     public static void main(String[] args) {

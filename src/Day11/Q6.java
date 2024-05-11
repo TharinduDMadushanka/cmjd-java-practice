@@ -1,7 +1,7 @@
 package Day11;
 
 /**
- * Option 2
+ * Option 2 --. default constructor
  */
 
 public class Q6 {
