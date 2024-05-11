@@ -1,9 +1,9 @@
 package Day11;
 
 /**
- *
-
-public class Q4 {
+ * Option 1
+ */
+public class Q5 {
     public static void main(String[] args) {
         B b1 =new B();
         b1.mB();
@@ -16,11 +16,9 @@ class A{
 }
 
 class B{
-    A a1;//reference --> given error because a1 not initialize
-
+    A a1 = new A();
 
     public void mB(){
         a1.mA();
     }
 }
- */
