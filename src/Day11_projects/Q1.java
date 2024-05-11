@@ -11,7 +11,10 @@ import java.awt.*;
 
 public class Q1 {
     public static void main(String[] args) {
-        new WaterTankWindow();
+        WaterTankWindow wt =new WaterTankWindow();
+        wt.setAlarmWindow(new AlarmWindow());
+        wt.setDisplayWindow(new DisplayWindow());
+        wt.setSplitterWindow(new SplitterWindow());
     }
 }
 
@@ -109,11 +112,11 @@ class WaterTankWindow extends JFrame{
         setLayout(new FlowLayout());
         setTitle("Water Tank Window");
 
-        //// initialize objects
-        this.alarmWindow = new AlarmWindow();
-        this.displayWindow = new DisplayWindow();
-        this.splitterWindow = new SplitterWindow();
-        ////
+//        //// initialize objects
+//        this.alarmWindow = new AlarmWindow();
+//        this.displayWindow = new DisplayWindow();
+//        this.splitterWindow = new SplitterWindow();
+//        ////
 
         waterLevelSlider = new JSlider(JSlider.VERTICAL, 0, 100, 50);
         waterLevelSlider.setMajorTickSpacing(10);
@@ -132,4 +135,21 @@ class WaterTankWindow extends JFrame{
 
         setVisible(true);
     }
+
+    /**
+     * set current situation for display menu
+     * @param displayWindow
+     */
+    public void setDisplayWindow(DisplayWindow displayWindow){
+        this.displayWindow=displayWindow;
+    }
+
+    public void setAlarmWindow(AlarmWindow alarmWindow){
+        this.alarmWindow=alarmWindow;
+    }
+
+    public void setSplitterWindow(SplitterWindow splitterWindow){
+        this.splitterWindow=splitterWindow;
+    }
+
 }
