@@ -36,7 +36,7 @@ class SliderFrame2 extends JFrame {
             @Override
             public void stateChanged(ChangeEvent e) {
                 int value= slider.getValue();
-                displayFrame.textField.setText(Integer.toString(value)); //Integer.toString(value)
+                displayFrame.setTextField(value);
             }
         });
 
@@ -45,7 +45,8 @@ class SliderFrame2 extends JFrame {
     }
 }
 class DisplayFrame extends JFrame{
-    JTextField textField;
+    private JTextField textField;
+    private int value;
 
     DisplayFrame(){
         setSize(250, 300);
@@ -57,6 +58,9 @@ class DisplayFrame extends JFrame{
         textField.setFont(new Font("", 1, 20));
         add(textField);
         setVisible(true);
+    }
+    public void setTextField(int value){ //setters
+        this.textField.setText(Integer.toString(value));
     }
 }
 
