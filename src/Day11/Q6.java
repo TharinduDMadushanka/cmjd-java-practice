@@ -1,22 +1,24 @@
 package Day11;
 
-/**
- * Option 1
- */
-public class Q5 {
+public class Q6 {
     public static void main(String[] args) {
-        B1 b1 =new B1();
+        A a = new A();
+        B b1 = new B(a);
         b1.mB();
     }
 }
-class A1{
+class A{
     public void mA(){
         System.out.println("mA of A");
     }
 }
 
-class B1{
-    A1 a1 = new A1();
+class B{
+    A a1;//reference --> given error because a1 not initialize
+    B(A a1){
+        this.a1 = a1;
+    }
+
 
     public void mB(){
         a1.mA();
