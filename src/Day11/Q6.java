@@ -1,5 +1,9 @@
 package Day11;
 
+/**
+ * Option 2
+ */
+
 public class Q6 {
     public static void main(String[] args) {
         A a = new A();
