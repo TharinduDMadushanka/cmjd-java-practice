@@ -11,21 +11,14 @@ public class Q3 {
     }
 }
 class SliderFrame2 extends JFrame {
-
-    private JTextField textField;
     private JSlider slider;
-
-    JButton button;
+    private DisplayFrame displayFrame;
 
     SliderFrame2() {
         setSize(250, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
-
-        textField=new JTextField(20); //text field
-        setFont(new Font("",1,20));
-        add(textField);
 
         slider=new JSlider(JSlider.VERTICAL,0,100,50); //slider
         slider.setMajorTickSpacing(10);
@@ -36,9 +29,25 @@ class SliderFrame2 extends JFrame {
             @Override
             public void stateChanged(ChangeEvent e) {
                 int value= slider.getValue();
-                textField.setText(value+""); //Integer.toString(value)
+                displayFrame.textField.setText(Integer.toString(value)); //Integer.toString(value)
             }
         });
+
+
+        setVisible(true);
+    }
+}
+class DisplayFrame extends SliderFrame2{
+    JTextField textField;
+    DisplayFrame(){
+        setSize(250, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new FlowLayout());
+
+        textField=new JTextField(20); //text field
+        setFont(new Font("",1,20));
+        add(textField);
 
         setVisible(true);
     }
