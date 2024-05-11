@@ -11,29 +11,32 @@ import java.awt.*;
 
 public class Q1 {
     public static void main(String[] args) {
-        WaterTankWindow wt =new WaterTankWindow();
-        wt.setAlarmWindow(new AlarmWindow());
-        wt.setDisplayWindow(new DisplayWindow());
-        wt.setSplitterWindow(new SplitterWindow());
+        WaterTankController waterTankController = new WaterTankController();
+        waterTankController.setAlarmWindow(new AlarmWindow());
+        waterTankController.setDisplayWindow(new DisplayWindow());
+        waterTankController.setSplitterWindow(new SplitterWindow());
+
+        WaterTankWindow waterTankWindow = new WaterTankWindow(waterTankController);
+
     }
 }
 
 /**
  * create Display menu gui for water level slider
  */
-class DisplayWindow extends JFrame{
+class DisplayWindow extends JFrame {
     private JLabel displayLable;
     private int waterLevel;
 
-    DisplayWindow(){
-        setSize(300,300);
+    DisplayWindow() {
+        setSize(300, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
         setTitle("Display Window");
 
-        displayLable=new JLabel("50");
-        displayLable.setFont(new Font("",1,35));
+        displayLable = new JLabel("50");
+        displayLable.setFont(new Font("", 1, 35));
         add(displayLable);
 
         setVisible(true);
@@ -47,24 +50,26 @@ class DisplayWindow extends JFrame{
 /**
  * Create alarm window
  */
-class AlarmWindow extends JFrame{
+class AlarmWindow extends JFrame {
     private JLabel alarmLable;
     private int waterLevel;
-    AlarmWindow(){
-        setSize(300,300);
+
+    AlarmWindow() {
+        setSize(300, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
         setTitle("Alarm Window");
 
-        alarmLable=new JLabel("OFF");
-        alarmLable.setFont(new Font("",1,35));
+        alarmLable = new JLabel("OFF");
+        alarmLable.setFont(new Font("", 1, 35));
         add(alarmLable);
 
         setVisible(true);
     }
+
     public void setAlarmLabelValue(int waterLevel) {
-        this.alarmLable.setText(waterLevel>50?"ON":"OFF");
+        this.alarmLable.setText(waterLevel > 50 ? "ON" : "OFF");
     }
 }
 
@@ -72,28 +77,63 @@ class AlarmWindow extends JFrame{
  * Splitter window
  */
 
-class SplitterWindow extends JFrame{
+class SplitterWindow extends JFrame {
     private JLabel splitterLable;
     private int waterLevel;
 
 
-    SplitterWindow(){
-        setSize(300,300);
+    SplitterWindow() {
+        setSize(300, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
         setTitle("Alarm Window");
 
-        splitterLable=new JLabel("OFF");
-        splitterLable.setFont(new Font("",1,35));
+        splitterLable = new JLabel("OFF");
+        splitterLable.setFont(new Font("", 1, 35));
         add(splitterLable);
 
         setVisible(true);
     }
+
     public void setSplitterLabelValue(int waterLevel) {
-        this.splitterLable.setText(waterLevel>75?"ON":"OFF");
+        this.splitterLable.setText(waterLevel > 75 ? "ON" : "OFF");
     }
 }
+
+class WaterTankController{
+    private DisplayWindow displayWindow;
+    private AlarmWindow alarmWindow;
+    private SplitterWindow splitterWindow;
+
+    private int waterLevel;
+
+    public void setDisplayWindow(DisplayWindow displayWindow){
+        this.displayWindow = displayWindow;
+    }
+
+    public void setAlarmWindow(AlarmWindow alarmWindow){
+        this.alarmWindow = alarmWindow;
+    }
+
+    public void setSplitterWindow(SplitterWindow splitterWindow){
+        this.splitterWindow = splitterWindow;
+    }
+
+    public void setWaterLevel(int waterLevel){
+        if(this.waterLevel != waterLevel){
+            this.waterLevel = waterLevel;
+            notifyObject();
+        }
+    }
+
+    public void notifyObject(){
+        displayWindow.setDisplayLabelValue(waterLevel);
+        alarmWindow.setAlarmLabelValue(waterLevel);
+        splitterWindow.setSplitterLabelValue(waterLevel);
+    }
+}
+
 
 /**
  * water tank window
@@ -101,22 +141,16 @@ class SplitterWindow extends JFrame{
 class WaterTankWindow extends JFrame{
     private JSlider waterLevelSlider;
 
-    private DisplayWindow displayWindow;
-    private AlarmWindow alarmWindow;
-    private SplitterWindow splitterWindow;
+    private WaterTankController waterTankController;
 
-    WaterTankWindow(){
+    WaterTankWindow(WaterTankController waterTankController){
         setSize(300,300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
         setTitle("Water Tank Window");
 
-//        //// initialize objects
-//        this.alarmWindow = new AlarmWindow();
-//        this.displayWindow = new DisplayWindow();
-//        this.splitterWindow = new SplitterWindow();
-//        ////
+        this.waterTankController = waterTankController;
 
         waterLevelSlider = new JSlider(JSlider.VERTICAL, 0, 100, 50);
         waterLevelSlider.setMajorTickSpacing(10);
@@ -125,9 +159,7 @@ class WaterTankWindow extends JFrame{
         waterLevelSlider.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 int waterLevel = waterLevelSlider.getValue();
-                displayWindow.setDisplayLabelValue(waterLevel);
-                alarmWindow.setAlarmLabelValue(waterLevel);
-                splitterWindow.setSplitterLabelValue(waterLevel);
+                waterTankController.setWaterLevel(waterLevel);
             }
         });
 
@@ -136,20 +168,5 @@ class WaterTankWindow extends JFrame{
         setVisible(true);
     }
 
-    /**
-     * set current situation for display menu
-     * @param displayWindow
-     */
-    public void setDisplayWindow(DisplayWindow displayWindow){
-        this.displayWindow=displayWindow;
-    }
-
-    public void setAlarmWindow(AlarmWindow alarmWindow){
-        this.alarmWindow=alarmWindow;
-    }
-
-    public void setSplitterWindow(SplitterWindow splitterWindow){
-        this.splitterWindow=splitterWindow;
-    }
 
 }
