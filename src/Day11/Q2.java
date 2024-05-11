@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class Q2 {
     public static void main(String[] args) {
-        SliderFrame c2 =new SliderFrame();
+        new SliderFrame();
     }
 
     static class SliderFrame extends JFrame {
@@ -26,6 +26,10 @@ public class Q2 {
             textField=new JTextField(20);
             setFont(new Font("",1,20));
             add(textField);
+
+            slider=new JSlider(JSlider.VERTICAL,0,100,50);
+            slider.setMajorTickSpacing(10);
+            slider.setPaintLabels(true);
 
             setVisible(true);
         }
