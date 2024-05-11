@@ -18,7 +18,7 @@ public class Q2 {
         JButton button;
 
         SliderFrame() {
-            setSize(500, 400);
+            setSize(250, 300);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setLocationRelativeTo(null);
             setLayout(new FlowLayout());
@@ -30,6 +30,7 @@ public class Q2 {
             slider=new JSlider(JSlider.VERTICAL,0,100,50);
             slider.setMajorTickSpacing(10);
             slider.setPaintLabels(true);
+            add(slider);
 
             setVisible(true);
         }
