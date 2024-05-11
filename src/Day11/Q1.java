@@ -1,5 +1,9 @@
 package Day11;
 
+/**
+ * EVENT HANDLING
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,14 +12,14 @@ import java.awt.event.ActionListener;
 
 class Q1 {
     public static void main(String[] args) {
-        Calculator c1 = new Calculator();
+        Calculator1 c1 = new Calculator1();
     }
 
-    static class Calculator extends JFrame {
+    static class Calculator1 extends JFrame {
 
         JButton button;
 
-        Calculator() {
+        Calculator1() {
             setSize(500, 400);
             setTitle("Calculator");
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
