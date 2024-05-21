@@ -101,36 +101,43 @@ class SplitterWindow extends JFrame {
     }
 }
 
-class WaterTankController{
+class WaterTankController {
     private DisplayWindow displayWindow;
     private AlarmWindow alarmWindow;
     private SplitterWindow splitterWindow;
+    private SMSWindow smsWindow;
 
     private int waterLevel;
 
-    public void setDisplayWindow(DisplayWindow displayWindow){
+    public void setDisplayWindow(DisplayWindow displayWindow) {
         this.displayWindow = displayWindow;
     }
 
-    public void setAlarmWindow(AlarmWindow alarmWindow){
+    public void setAlarmWindow(AlarmWindow alarmWindow) {
         this.alarmWindow = alarmWindow;
     }
 
-    public void setSplitterWindow(SplitterWindow splitterWindow){
+    public void setSplitterWindow(SplitterWindow splitterWindow) {
         this.splitterWindow = splitterWindow;
     }
 
-    public void setWaterLevel(int waterLevel){
-        if(this.waterLevel != waterLevel){
+    public void setSMSWindow(SMSWindow smsWindow){
+        this.smsWindow = smsWindow;
+    }
+
+
+    public void setWaterLevel(int waterLevel) {
+        if (this.waterLevel != waterLevel) {
             this.waterLevel = waterLevel;
             notifyObject();
         }
     }
 
-    public void notifyObject(){
+    public void notifyObject() {
         displayWindow.setDisplayLabelValue(waterLevel);
         alarmWindow.setAlarmLabelValue(waterLevel);
         splitterWindow.setSplitterLabelValue(waterLevel);
+        smsWindow.sendSMS(waterLevel);
     }
 }
 
@@ -138,13 +145,13 @@ class WaterTankController{
 /**
  * water tank window
  */
-class WaterTankWindow extends JFrame{
+class WaterTankWindow extends JFrame {
     private JSlider waterLevelSlider;
 
     private WaterTankController waterTankController;
 
-    WaterTankWindow(WaterTankController waterTankController){
-        setSize(300,300);
+    WaterTankWindow(WaterTankController waterTankController) {
+        setSize(300, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
@@ -167,6 +174,25 @@ class WaterTankWindow extends JFrame{
 
         setVisible(true);
     }
+}
+class SMSWindow extends JFrame{
+    private JLabel smsLabel;
 
+    SMSWindow(){
+        setSize(300,300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new FlowLayout());
+        setTitle("SMS Window");
 
+        smsLabel = new JLabel();
+        smsLabel.setFont(new Font("", 1, 25));
+        add(smsLabel);
+
+        setVisible(true);
+    }
+
+    public void sendSMS(int waterLevel){
+        smsLabel.setText("Sending SMS : " + waterLevel);
+    }
 }
