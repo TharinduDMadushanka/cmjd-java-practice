@@ -15,6 +15,7 @@ public class Q1 {
         waterTankController.setAlarmWindow(new AlarmWindow());
         waterTankController.setDisplayWindow(new DisplayWindow());
         waterTankController.setSplitterWindow(new SplitterWindow());
+        waterTankController.setSMSWindow(new SMSWindow());
 
         WaterTankWindow waterTankWindow = new WaterTankWindow(waterTankController);
 
