@@ -16,6 +16,29 @@ class WaterLevelObserver extends JFrame{
     }
 }
 
+class SMSWindow extends WaterLevelObserver{
+    private JLabel smsLabel;
+
+    SMSWindow(){
+        setSize(300,300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new FlowLayout());
+        setTitle("SMS Window");
+
+        smsLabel = new JLabel();
+        smsLabel.setFont(new Font("", 1, 25));
+        add(smsLabel);
+
+        setVisible(true);
+    }
+
+    public void update(int waterLevel){
+        smsLabel.setText("Sending SMS : " + waterLevel);
+    }
+}
+
+
 class DisplayWindow extends WaterLevelObserver{
     private JLabel displayLabel;
 
@@ -126,7 +149,6 @@ class WaterTankWindow extends JFrame{
 
         this.waterTankController = waterTankController;
 
-
         waterLevelSlider = new JSlider(JSlider.VERTICAL, 0, 100, 50);
         waterLevelSlider.setMajorTickSpacing(10);
         waterLevelSlider.setPaintLabels(true);
@@ -152,7 +174,9 @@ class Example {
         waterTankController.addWaterLevelObserver(new AlarmWindow());
         waterTankController.addWaterLevelObserver(new DisplayWindow());
         waterTankController.addWaterLevelObserver(new SplitterWindow());
+        waterTankController.addWaterLevelObserver(new SMSWindow());
 
         WaterTankWindow waterTankWindow = new WaterTankWindow(waterTankController);
     }
 }
+
