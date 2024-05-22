@@ -1,14 +1,14 @@
-package Day_12._OOP4;
+package Day12_OOP4;
 
 /**
  * Create water tank water level monitoring program
+ * Use polymorphism
  */
 
 import javax.swing.*;
 import java.awt.*;
 
 import javax.swing.event.*;
-import java.awt.event.*;
 
 class WaterLevelObserver extends JFrame{
     public void update(int waterLevel){
