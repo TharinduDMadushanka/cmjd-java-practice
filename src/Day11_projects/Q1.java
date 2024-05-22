@@ -176,6 +176,10 @@ class WaterTankWindow extends JFrame {
         setVisible(true);
     }
 }
+
+/**
+ * SMS WINDOW
+ */
 class SMSWindow extends JFrame{
     private JLabel smsLabel;
 
