@@ -9,8 +9,8 @@ package Day12_OOP4;
     abstract public void stop();
 }*/
 
-interface Vehicle1{
-    public void park();
-    public void start();
-    public void stop();
-}
+//interface Vehicle1{
+//    public void park();
+//    public void start();
+//    public void stop();
+//}

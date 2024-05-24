@@ -3,5 +3,13 @@
  */
 package Day12_OOP4;
 
-public class Q49 {
-}
+//interface Vehicle{
+//    void park();
+//}
+//
+//class Q49 {
+//    public static void main(String[] args) {
+//        Vehicle v1; // Legal
+//        v1 = new Vehicle(); // Illegal
+//    }
+//}
