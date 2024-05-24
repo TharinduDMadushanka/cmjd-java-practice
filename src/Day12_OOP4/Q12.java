@@ -1,5 +1,10 @@
 package Day12_OOP4;
 
+/**
+ * Method “public Class getClass()”
+ * can get class template
+ */
+
 class Customer{
     private int code;
     private String name;
