@@ -1,5 +1,5 @@
 /**
- * Case 02
+ * Case 03
  */
 
 package Day12_OOP4;
@@ -10,15 +10,15 @@ package Day12_OOP4;
 //}
 //
 //class Car extends Vehicle{
-//    public void park(){ // Illegal--> cant declare super class static methods
+//    public static void park(){
 //        System.out.println("Car Parking");
 //    }
 //}
 //
 //
-//class Q21 {
+//class Q22 {
 //    public static void main(String[] args) {
 //        Vehicle v1 = new Car();
-//        v1.park();
+//        v1.park(); //--> park() belongs to Vehicle class
 //    }
 //}
