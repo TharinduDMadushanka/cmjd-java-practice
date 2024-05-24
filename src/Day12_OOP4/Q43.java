@@ -4,10 +4,10 @@
  */
 package Day12_OOP4;
 
-interface Vehicle{
-
-}
-
-//class Car extends Vehicle{} // Illegal
-class Car implements Vehicle{} // Legal
-
+//interface Vehicle{
+//
+//}
+//
+////class Car extends Vehicle{} // Illegal
+//class Car implements Vehicle{} // Legal
+//
