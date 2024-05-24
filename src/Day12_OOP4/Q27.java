@@ -21,7 +21,7 @@ class Van extends Vehicle{
         System.out.println("Van Parking");
     }
 }
-class Example {
+class Q27 {
     public static void main(String[] args) {
         Vehicle[] vehicles = {new Car(), new Bus(), new Van()};
         for (Vehicle vehicle : vehicles) {
