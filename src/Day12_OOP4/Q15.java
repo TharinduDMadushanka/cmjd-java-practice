@@ -14,6 +14,9 @@ class Customer{
     //     String hex = Integer.toHexString(hashCode);
     //     return getClass().getName() + "@" + hex;
     // }
+    public String toString(){
+        return this.code + "-" + this.name;
+    }
 }
 
 class Q15 {
