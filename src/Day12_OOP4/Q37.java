@@ -1,7 +1,7 @@
 package Day12_OOP4;
 
 /**
- * Case 9
+ * Case 10
  * cant have abs constructors
  */
 
