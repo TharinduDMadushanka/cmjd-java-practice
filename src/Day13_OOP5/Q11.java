@@ -24,6 +24,8 @@ class MyWindow extends JFrame {
         setLayout(new FlowLayout());
 
         textField = new JTextField(20);
+        textField.setFont(new Font("", 1, 25));
+
         button = new JButton("Button");
         button.setFont(new Font("", 1, 25));
         button.addActionListener(new MyClass1(this));
