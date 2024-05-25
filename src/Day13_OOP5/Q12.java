@@ -2,6 +2,7 @@ package Day13_OOP5;
 
 /**
  * Option 01
+ * use inheritance for access My class reference to calculator class
  */
 import java.awt.*;
 import java.awt.event.*;
