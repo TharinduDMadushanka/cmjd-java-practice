@@ -5,5 +5,8 @@
  *
  */
 package Day13_OOP5;
-public class Q3 {
-}
+interface Lion{}
+interface Fox extends Lion{}
+interface Cat{}
+interface Dog extends Lion, Cat{} // Legal
+
