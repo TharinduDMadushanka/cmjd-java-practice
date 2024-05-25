@@ -5,8 +5,8 @@
  *
  */
 package Day13_OOP5;
-interface Lion{}
-interface Fox extends Lion{}
-interface Cat{}
-interface Dog extends Lion, Cat{} // Legal
-
+//interface Lion{}
+//interface Fox extends Lion{}
+//interface Cat{}
+//interface Dog extends Lion, Cat{} // Legal
+//
