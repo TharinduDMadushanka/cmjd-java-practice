@@ -1,6 +1,7 @@
 package Day13_OOP5;
 /**
  * Case 3
+ * There should me ";" after the code block
  */
 interface Vehicle{
     void park();
