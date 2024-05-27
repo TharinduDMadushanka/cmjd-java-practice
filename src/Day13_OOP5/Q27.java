@@ -6,15 +6,15 @@ package Day13_OOP5;
  * Functional Interface --> only one methods to implement
  * Lambda use for functional expression
  */
-interface Vehicle{
-    void park();
-    void start();
-}
-
-class Example {
-    public static void main(String[] args) {
-        Vehicle v1= ()->{ // Illegal
-
-        };
-    }
-}
+//interface Vehicle{
+//    void park();
+//    void start();
+//}
+//
+//class Example {
+//    public static void main(String[] args) {
+//        Vehicle v1= ()->{ // Illegal
+//
+//        };
+//    }
+//}
