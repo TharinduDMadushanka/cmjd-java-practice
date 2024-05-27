@@ -1,7 +1,7 @@
 package Day13_OOP5;
 
 /**
- *
+ *(Lambda Expression)
  */
 interface Math{
     public int operation(int num1, int num2);
