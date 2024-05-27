@@ -14,7 +14,7 @@ class Example {
         //Vehicle v2 = ()-> return true; // Illegal
 
         Vehicle v2 = ()-> {
-            //
+            //Multiple lines
             //
             return true;
         };
