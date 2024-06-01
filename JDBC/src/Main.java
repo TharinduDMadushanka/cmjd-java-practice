@@ -13,10 +13,7 @@ public class Main {
 
         // Step 04 --> Execute query
         while (resultSet.next()){
-            System.out.println(resultSet.getString("CustID" + " " +
-                    resultSet.getString("CustTitle") +
-                    " " + resultSet.getString("CustName") +
-                    " " + resultSet.getDouble("salary")));
+            System.out.println(resultSet.getString("CustID") + " " + resultSet.getString("CustTitle") + " " + resultSet.getString("CustName") + " " + resultSet.getDouble("salary"));
         }
     }
 }
