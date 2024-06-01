@@ -54,7 +54,7 @@ public class Q3 {
         statement.setString(9, zip);
 
 
-        int result = statement.executeUpdate(sql);
+        int result = statement.executeUpdate();
 
         System.out.println(result > 0 ? "Success" : "Fail");
 
