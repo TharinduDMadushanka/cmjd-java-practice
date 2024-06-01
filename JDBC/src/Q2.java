@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class Q2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -39,5 +39,12 @@ public class Q2 {
 
         System.out.print("Input Customer Zip code:");
         String zip = scanner.next();
+
+        Class.forName("com.mysql.cj.jdbc.Driver"); // Step 01 --> load mysql driver
+
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/supermarket", "root", "Thariya920@");
+
+        // Step 03
+        Statement statement = connection.createStatement();
     }
 }
