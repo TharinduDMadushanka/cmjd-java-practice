@@ -1,3 +1,7 @@
+/**
+ * Use tha singleton db class in here
+ */
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -5,12 +9,11 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws ClassNotFoundException, SQLException{
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Input Customer Id : ");
         String custId = scanner.nextLine();
-
 
 
         Connection connection = DBConnection.getInstance().getConnetion();
