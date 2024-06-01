@@ -41,7 +41,7 @@ public class Q2 {
         double salary = scanner.nextDouble();
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Supermarket", "root", "mysql");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Supermarket", "root", "Thariya920@");
 
         Statement statement = connection.createStatement();
         String sql = "INSERT INTO Customer VALUES ('"+custId+"', '"+title+"', '"+name+"', '"+dob+"', "+salary+", '"+address+"', '"+city+"', '"+province+"', '"+zip+"')";
