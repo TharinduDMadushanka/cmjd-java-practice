@@ -1,22 +1,26 @@
 /**
  * Singleton Design Pattern --> class should have only one object
- * Step 02
+ * Step 03
+ * Done
  */
 public class Q6 {
     public static void main(String[] args) {
-        A a1 =new A();
+        A a1 =A.getInstance();
         a1.myMethod();
 
-        A a2 =new A();
+        A a2 =A.getInstance();
         a2.myMethod();
     }
 }
 
 class A{
 
+    /**
+     * constructor should private
+     */
     private static A a;
 
-    public A(){}
+    private A(){}
 
     public static A getInstance(){
         if (a==null){
