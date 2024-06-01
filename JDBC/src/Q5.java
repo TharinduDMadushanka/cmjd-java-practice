@@ -5,6 +5,9 @@ public class Q5 {
     public static void main(String[] args) {
         A a1 =new A();
         a1.myMethod();
+
+        A a2 =new A();
+        a2.myMethod();
     }
 }
 
