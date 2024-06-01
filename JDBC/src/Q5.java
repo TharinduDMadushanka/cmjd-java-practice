@@ -1,5 +1,6 @@
 /**
  * Singleton Design Pattern --> class should have only one object
+ *Step 01
  */
 public class Q5 {
     public static void main(String[] args) {
@@ -12,8 +13,17 @@ public class Q5 {
 }
 
 class A{
+
+    private static A a;
+
     public A(){}
 
+    public static A getInstance(){
+        if (a==null){
+            a= new A();
+        }
+        return a;
+    }
     public void myMethod(){
         System.out.println("myMethod in "+this);
     }
