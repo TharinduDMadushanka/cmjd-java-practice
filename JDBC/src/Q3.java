@@ -1,5 +1,5 @@
 /**
- * work with user inputs
+ * work with user inputs -> easy
  */
 
 import java.sql.*;
