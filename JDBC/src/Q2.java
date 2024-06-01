@@ -46,5 +46,11 @@ public class Q2 {
 
         // Step 03
         Statement statement = connection.createStatement();
+
+        String sql ="INSERT INTO Customer VALUES ('"+custId+"'"+custTitle+"'"+custName+"'"+custDob+"'"+salary+"'"+custAddress+"'"+custCity+"'"+custProvince+"'"+zip;
+
+        int result = statement.executeUpdate(sql);
+
+        System.out.println(result > 0 ? "Success" : "Fail");
     }
 }
