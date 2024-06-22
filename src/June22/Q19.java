@@ -12,7 +12,7 @@ package June22;
 //     public static final String BLACK = "Black";
 // }
 
-enum Color{
+enum Color1{
     RED, GREEN, BLACK, BLUE;// Enum ObjectsS
 }
 
@@ -20,8 +20,8 @@ class Example19 {
     public static void main(String args[]) {
         System.out.println(Color.RED);
 
-        Color c1; // Create an enum reference type 'Color'
-        c1 = Color.RED;
+        Color1 c1; // Create an enum reference type 'Color'
+        c1 = Color1.RED;
         System.out.println(c1); // c1.toString() --> RED
     }
 }
