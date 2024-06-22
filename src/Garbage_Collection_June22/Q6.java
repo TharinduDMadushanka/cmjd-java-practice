@@ -1,26 +1,29 @@
 package Garbage_Collection_June22;
 
 /**
- * case 03
- * gc runs some times
+ * case 04
+ * USE NULL REFERENCES
  */
 
-class Q5{
+class Q6{
     long[] ar = new long[100000];
 
     public void finalize(){
         System.out.println("Deleted....");
     }
 }
-class Example5 {
+class Example6 {
     public static void main(String args[]) {
         System.out.println("Start Main");
 
-        new Q5();
-        new Q5();
-        new Q5();
+        Q6 c1 = new Q6();
+        // c1.
+        // c1.
+        // c1.
 
-        System.gc(); // request for garbage collector
+        c1 = null;
+
+        System.gc();
 
         try {
             Thread.sleep(1000);

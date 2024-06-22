@@ -1,5 +1,9 @@
 package Garbage_Collection_June22;
 
+/**
+ * case 02
+ */
+
 class Q4{
     long[] ar = new long[100000];
 
