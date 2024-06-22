@@ -6,7 +6,7 @@ package Garbage_Collection_June22;
  * error = Java heap space out
  * in here create Unused objects(objects without references)
  * JVM has Garbage collector software
- *
+ * it removes unused objects
  */
 
 class Q2{
