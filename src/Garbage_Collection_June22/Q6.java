@@ -1,6 +1,7 @@
 package Garbage_Collection_June22;
 
 /**
+ * HOW CODE FOR ELIGIBLE TO GARBAGE COLLECTOR
  * case 04
  * USE NULL REFERENCES
  */

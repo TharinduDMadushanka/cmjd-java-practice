@@ -12,7 +12,7 @@ class Q7{
         System.out.println("Deleted....");
     }
 }
-class Example {
+class Example7 {
     public static void main(String args[]) {
         System.out.println("Start Main");
 
