@@ -4,6 +4,9 @@ package Garbage_Collection_June22;
  * create Q1[] array and pass all objects to it
  * but it runs only i=1953
  * error = Java heap space out
+ * in here create Unused objects(objects without references)
+ * JVM has Garbage collector software
+ *
  */
 
 class Q2{
