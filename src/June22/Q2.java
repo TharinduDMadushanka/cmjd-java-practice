@@ -1,4 +1,4 @@
-package Garbage_Collection_June22;
+package June22;
 
 /**
  * create Q1[] array and pass all objects to it

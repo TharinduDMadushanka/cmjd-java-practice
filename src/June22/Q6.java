@@ -1,4 +1,4 @@
-package Garbage_Collection_June22;
+package June22;
 
 /**
  * HOW CODE FOR ELIGIBLE TO GARBAGE COLLECTOR

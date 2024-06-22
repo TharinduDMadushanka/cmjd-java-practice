@@ -1,31 +1,27 @@
-package Garbage_Collection_June22;
+package June22;
 
 /**
- * Case 06
- * create object without referencing
+ * case 02
  */
 
-class Q8{
+class Q4{
     long[] ar = new long[100000];
 
     public void finalize(){
         System.out.println("Deleted....");
     }
-
-    public void myMethod(){
-        System.out.println("myMethod()");
-    }
 }
-class Example8 {
+class Example4 {
     public static void main(String args[]) {
         System.out.println("Start Main");
 
-        new Q8().myMethod();
 
-        System.gc();
+        new Q4();
+        new Q4();
+        new Q4();
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1000); // hold program 1000 millisecond without run
         } catch (Exception e) {}
 
         System.out.println("End Main");

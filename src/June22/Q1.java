@@ -1,4 +1,8 @@
-package Garbage_Collection_June22;
+package June22;
+
+/**
+ * GARBAGE COLLECTOR
+ */
 
 /**
  * long = 64 bits

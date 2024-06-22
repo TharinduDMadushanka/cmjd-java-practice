@@ -1,32 +1,26 @@
-package Garbage_Collection_June22;
+package June22;
 
 /**
- * CASE 07
- * Use code blocks (local scope)
+ * case 03
+ * gc runs some times
  */
 
-class Q9{
+class Q5{
     long[] ar = new long[100000];
 
     public void finalize(){
         System.out.println("Deleted....");
     }
-
-    public void myMethod(){
-        System.out.println("myMethod()");
-    }
 }
-class Example9 {
+class Example5 {
     public static void main(String args[]) {
         System.out.println("Start Main");
 
-        int x = 100;
-        if(x > 0){
-            Q9 c1 = new Q9();
-            c1.myMethod();
-        }
+        new Q5();
+        new Q5();
+        new Q5();
 
-        System.gc();
+        System.gc(); // request for garbage collector
 
         try {
             Thread.sleep(1000);
@@ -35,3 +29,4 @@ class Example9 {
         System.out.println("End Main");
     }
 }
+

@@ -1,26 +1,28 @@
-package Garbage_Collection_June22;
+package June22;
 
 /**
- * case 03
- * gc runs some times
+ * Case 06
+ * create object without referencing
  */
 
-class Q5{
+class Q8{
     long[] ar = new long[100000];
 
     public void finalize(){
         System.out.println("Deleted....");
     }
+
+    public void myMethod(){
+        System.out.println("myMethod()");
+    }
 }
-class Example5 {
+class Example8 {
     public static void main(String args[]) {
         System.out.println("Start Main");
 
-        new Q5();
-        new Q5();
-        new Q5();
+        new Q8().myMethod();
 
-        System.gc(); // request for garbage collector
+        System.gc();
 
         try {
             Thread.sleep(1000);
