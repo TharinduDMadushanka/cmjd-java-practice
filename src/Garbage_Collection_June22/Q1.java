@@ -1,5 +1,10 @@
 package Garbage_Collection_June22;
 
+/**
+ * long = 64 bits
+ * for 100000 objects we should have 78.125 GB but my computer has 8 GB RAM
+ * but program runs
+ */
 class Q1{
     long[] ar = new long[100000];
 }
