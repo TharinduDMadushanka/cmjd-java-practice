@@ -3,6 +3,7 @@ package June22;
 /**
  * ENUMERATION
  * we can do same thing with enum instead of final
+ * call constructor for all objects
  */
 
 // class Color{
